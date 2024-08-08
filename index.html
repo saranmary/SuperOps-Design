@@ -102,7 +102,7 @@
         <div class="ques2">we have them answered. </div>
       </div>
       <div class="part2">
-        <div class="questions">
+        <div class="questions animate">
           <div class="all1">Is there an eligibility to be a SuperOps.ai affiliate? <span class="material-symbols-outlined">close</span></div>
           <div class="all2">If you're someone who's passionate about educating or adding value to the channel, you're a fit. You could be: 
             <div class="all3">
@@ -116,24 +116,68 @@
           </div>
           
         </div>
-        <div class="questions">What is a valid sign-up?<span class="material-symbols-outlined" >stat_minus_1</span></div>
+        <div class="questions">
+          <div class="all1">What is a valid sign-up? <span class="material-symbols-outlined">stat_minus_1</span></div>
+          <div class="all2">If you're someone who's passionate about educating or adding value to the channel, you're a fit. You could be: 
+            <div class="all3">
+              <ul>
+                <li>An MSP owner</li>
+                <li>A geek who's passionate about MSPs</li>
+                <li>An MSP sales/marketing coach</li>
+                <li>Anyone who works with MSPs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
         
-        <div class="questions">When will my commissions be paid?<span class="material-symbols-outlined" >stat_minus_1</span></div>
-        <div class="questions"><div style="width: 480px;">What if my prospect upgrades/downgrades during the first year?<span class="material-symbols-outlined" style="bottom: 40px;" >stat_minus_1</span></div></div>
+        <div class="questions">
+          <div class="all1">When will my commissions be paid? <span class="material-symbols-outlined">stat_minus_1</span></div>
+          <div class="all2">If you're someone who's passionate about educating or adding value to the channel, you're a fit. You could be: 
+            <div class="all3">
+              <ul>
+                <li>An MSP owner</li>
+                <li>A geek who's passionate about MSPs</li>
+                <li>An MSP sales/marketing coach</li>
+                <li>Anyone who works with MSPs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="questions">
+          <div class="all1">What if my prospect upgrades/downgrades during the first year?<span class="material-symbols-outlined" style="top: 25px;">stat_minus_1</span></div>
+          <div class="all2">If you're someone who's passionate about educating or adding value to the channel, you're a fit. You could be: 
+            <div class="all3">
+              <ul>
+                <li>An MSP owner</li>
+                <li>A geek who's passionate about MSPs</li>
+                <li>An MSP sales/marketing coach</li>
+                <li>Anyone who works with MSPs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
   <script>
   
-    let a = document.querySelectorAll('.questions');
+  let a = document.querySelectorAll('.questions');
     
     a.forEach(element => {
       
       element.addEventListener('click',function(){
-        a.forEach(b => b.classList.remove('question1'));
-
-        this.classList.add('question1')
-        
+        if (!this) {
+            return;
+        }
+        let iconEle = this.getElementsByClassName('material-symbols-outlined')[0];
+        let iconName = iconEle.innerText;
+        if (iconName === 'close') {
+            iconEle.innerText='stat_minus_1';
+            this.classList.remove('animate');
+            return;
+        }
+        this.classList.add('animate');
+        iconEle.innerText='close';
       })
       
     });
