@@ -1,15 +1,23 @@
 *{
-  font-family: poppins;
+  font-family: "poppins",sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  cursor: default;
 }
-
+header{
+  position: sticky;
+  top: 0px;
+  background-color: #fff;
+  z-index: 3;
+  
+}
 .navbar{
   display: flex;
   justify-content: space-evenly;
   padding: 20px 20px;
   align-items: center;
+
 }
 .nav-start{
   font-size: 22px;
@@ -75,6 +83,7 @@
 
   background-color:  #FFC2C8;
   margin: 0 20px;
+  margin-top: 10px;
   padding: 50px 0 30px 0;
   border-radius: 15px;
   text-align: center;
@@ -125,7 +134,7 @@
   color: #FF0055; 
   font-size: 70px;
   font-weight: 600;
-  font-family: Inter;
+  font-family: "Inter",sans-serif;
 }
 
 .line3{
@@ -205,7 +214,7 @@
 .card-no{
   font-size: 25px; 
   font-weight: 800;
-  font-family: Inter;
+  font-family: "Inter",sans-serif;
   position: relative;top: -23px;left:2px;
 }
 
@@ -252,20 +261,11 @@
   width: 700px;
 }
 
-/*.all-questions{
-  border: 1px solid #fff;
-  padding: 20px;
-  margin: 10px 0;
-  border-radius: 5px;
-  position: relative;
-  box-shadow: 0px 15px 30px rgba(45, 17, 17, 0.1);
-}
-*/
 .all1{
   color: #170426;
   font-size: 18px; 
   font-weight: 600;
-  padding: 10px 0;
+  padding: 5px 0 20px;
   width: 650px;
 }
 
@@ -289,22 +289,21 @@ li::marker{
 .questions{
   color: #170426;
   font-size: 16px; 
-  font-weight: 600; 
   border: 1px solid #170426;
-  padding: 20px;
+  padding: 20px 60px 20px 20px;
   margin: 10px 0;
   border-radius: 5px;
   position: relative;
   height: 72px;
   overflow: hidden;
-  
-  
+  transition: height 500ms linear;
 }
-.question1{
+
+.animate{
   height: 300px;
-  border: 1px solid #fff;
-  box-shadow: 0px 15px 30px rgba(45, 17, 17, 0.1);
- 
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  box-shadow: 0px 3px 10px 5px #d8d6d67d;
 }
   
 
@@ -313,4 +312,3 @@ li::marker{
   position: absolute;
   right: 30px;
 }
-
